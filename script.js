@@ -29,5 +29,12 @@ function addTip(event) {
 	document.querySelector("#new-total").textContent = newTotal;
 }
 
+// function splitTotal() {
+// 	var numPeople = document.querySelector("#num-people");
+// 	var split = document.querySelector("#split");
+// 	var splitTotal = document.querySelector("#split-total");
+// }
+
 // Set the onclick event to put the new total in the div below the form in the markup.
 submitEl.addEventListener("click", addTip);
+splitEl.addEventListener("click", splitTotal);
