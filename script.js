@@ -2,6 +2,7 @@
 var tipEl = document.querySelector("#tip-percentage");
 var totalEl = document.querySelector("#total");
 var submitEl = document.querySelector("#submit");
+var splitEl = document.querySelector("#split");
 
 // Calculating the tip using a function to multiply the tip by the percentage, turned into a decimal.
 function calculateTip(total, tipPercentage) {
@@ -29,11 +30,15 @@ function addTip(event) {
 	document.querySelector("#new-total").textContent = newTotal;
 }
 
-// function splitTotal() {
-// 	var numPeople = document.querySelector("#num-people");
-// 	var split = document.querySelector("#split");
-// 	var splitTotal = document.querySelector("#split-total");
-// }
+function splitTotal(event) {
+	event.preventDefault();
+	// Changing the variable of total to now mean the new total created above in the addTip function.
+	var total = document.querySelector("#new-total").textContent;
+	var numPeople = document.querySelector("#num-people").value;
+	// Making a new variable to perform the math dividing the newer total above by the number of people, then printing that to the DOM.
+	var newTotal = (total / numPeople).toFixed(2);
+	document.querySelector("#split-total").textContent = newTotal;
+}
 
 // Set the onclick event to put the new total in the div below the form in the markup.
 submitEl.addEventListener("click", addTip);
