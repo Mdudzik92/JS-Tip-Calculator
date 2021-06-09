@@ -10,6 +10,11 @@ function calculateTip(total, tipPercentage) {
 	return roundedResult;
 }
 
+function calculateTotal(total, tipAmount) {
+	// Using parseFloat method to make sure the values of total and tipAmount are numbers. Prior when they were entered they were strings. Important here because + can be used either to add or to concatenate.
+	return parseFloat(total) + parseFloat(tipAmount);
+}
+
 // Add the tip to the h4 in the markup.
 function addTip(event) {
 	event.preventDefault();
@@ -18,8 +23,10 @@ function addTip(event) {
 	var total = totalEl.value;
 	// Defining what multiplying the two end up as into one variable.
 	var tipAmount = calculateTip(total, tipPercentage);
-	// Printing the new variable to the DOM.
+	var newTotal = calculateTotal(total, tipAmount);
+	// Printing the new variables to the DOM.
 	document.querySelector("#tip-amount").textContent = tipAmount;
+	document.querySelector("#new-total").textContent = newTotal;
 }
 
 // Set the onclick event to put the new total in the div below the form in the markup.
