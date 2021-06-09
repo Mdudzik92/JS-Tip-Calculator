@@ -5,7 +5,7 @@ JavaScript Tip Calculator
 <!-- Live link to deployed app -->
 
 Repository: https://github.com/Mdudzik92/JS-Tip-Calculator<br>
-Deployed app: https://mdudzik92.github.io/js-tip-calculator/
+Deployed app: https://mdudzik92.github.io/JS-Tip-Calculator/
 
 <!-- Technologies used -->
 
@@ -17,8 +17,8 @@ This is a tip calculator app in which the user is able to add their bill total, 
 
 <!-- Screenshot -->
 
-<img src=".img1.png">
-<img src=".img2.png">
+<img src="./img1.png">
+<img src="./img2.png">
 
 <!-- License -->
 
